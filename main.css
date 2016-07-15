@@ -6,6 +6,20 @@
   margin-top:50px;
 }
 
+
+.mytxtbox{
+  width: 250px;
+  height: 200px;
+  border: black solid 2px;
+  background-color: lightblue;
+  float: right;
+  text-align: center;
+  font-size: 50px;
+  display: none;
+  margin-top: 200px;
+}
+
+
 .reset {
   height: 60px;
   width: 500px;

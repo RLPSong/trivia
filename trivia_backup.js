@@ -1,11 +1,12 @@
 // function numberOfQuestions(){
-
-// denotes total number of question.
+//
+// //denotes total number of question.
 // var p = prompt("Please enter number of questions", 10);
 // console.log(p);
 // return p;
 // }
-  //q = numberOfQuestions();
+// numberOfQuestions();
+//   //q = numberOfQuestions();
   var q = 15;
   document.getElementsByClassName('status')[0].innerHTML = "Player1 starts first, Let's Go!";
 
@@ -66,7 +67,7 @@
   var y = Math.trunc(q*Math.random());   // return 0 to (q-1)
 
       var exists = false;
-      for (var i = 0; i < 50; i++) {
+      for (var i = 0; i < 15; i++) {
 
 
       if (y===TempArr[i]) {
@@ -79,6 +80,14 @@
         TempArr.push(y);
     }
   }
+//Textbx
+function writetxtbx(msg){
+document.getElementsByClassName('mytxtbox')[0].style.display = "block";
+document.getElementsByClassName('mytxtbox')[0].style.position = "fixed";
+document.getElementsByClassName('mytxtbox')[0].innerHTML = msg;
+}
+
+
 
 //Switch player
 function switchplayer(){
@@ -115,8 +124,12 @@ function CheckWinCondition(){
 
 
   function reset(){
-  alert("Start a New Game?");
-  location.reload(true);
+    writetxtbx("Start a New Game?");
+    document.getElementsByClassName('mytxtbox')[0].addEventListener("click", function(){
+    location.reload(true);
+  });
+  // alert("Start a New Game?");
+  // location.reload(true);
   }
 
 
